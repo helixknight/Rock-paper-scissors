@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Choose your weapon!</h2>
+<form method="POST">
+    {% for choice in choices %}
+        <button class="button" name="choice" value="{{ choice }}">
+            <span class="emoji">{{ emoji[choice] }}</span> {{ choice.capitalize() }}
+        </button>
+    {% endfor %}
+</form>
+{% endblock %}
